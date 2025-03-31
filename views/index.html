@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <br>
+    <br>
+    <br> <!-- deus que me perdoe por essa gambiarra -->
+    <br> 
+    <div class="image-container">
+        <!-- Div imagem da esquerda -->
+        <div class="left-image">
+            <img src="{{ url_for('static', filename='images/brokenphone.svg') }}" alt="imagemgde">
+             <!-- Botão -->
+             <!-- <button class="custom-button">Explore</button> -->
+            </div>
+        </div>
+
+        <!-- Div 3 imagens pqnas -->
+        <div class="right-images">
+            <div class="small-image">
+                <img src="{{ url_for('static', filename='images/imgpq1.svg') }}" alt="imagempq1">
+            </div>
+            <div class="small-image">
+                <img src="{{ url_for('static', filename='images/imgpq2.svg') }}" alt="imagempq2">
+            </div>
+            <div class="small-image">
+                <img src="{{ url_for('static', filename='images/imgpq3.svg') }}" alt="imagempq3">
+            </div>
+        </div>
+    </div>
+
+    <button class="custom-button" href="{{ url_for('produtos')}}">Explore</button>
+
+<footer class="footer">
+        <div class="footer-section">
+            <h3>Categorias</h3>
+            <ul>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Eletrônicos</a></li>
+                <li><a href="#">Eletrodomésticos</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Áudio</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Informações</h3>
+            <ul>
+                <li><a href="#">Sobre nós</a></li>
+                <li><a href="#">Informações de entrega</a></li>
+                <li><a href="#">Política de privacidade</a></li>
+                <li><a href="#">Termos e condições</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contate-nos</h3>
+            <p>(13) 919281801</p>
+            <p>dudashop@gmail.com</p>
+            <p>Todos os dias da semana, das 18:30 às 23:00</p>
+        </div>
+
+        <div class="footer-section">
+            <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo" class="footer-logo">
+        </div>
+    </footer>
+</body>
+    
+{% endblock content %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br><br><br><br>
+
+{% if produto %}
+<div class="editar-container">
+    <h2>Editar Produto</h2>
+    <form method="POST" action="{{ url_for('editar', id=produto.id) }}">
+        <div class="form-group">
+            <label>Nome:</label>
+            <input type="text" name="nome" value="{{ produto.nome }}" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Preço:</label>
+            <input type="text" name="preco" value="{{ produto.preco }}" 
+                   pattern="^\d{1,3}(\.\d{3})*,\d{2}$" required>
+        </div>
+        
+        <button type="submit">Salvar</button>
+        <a href="{{ url_for('cadastro') }}">Cancelar</a>
+    </form>
+</div>
+{% else %}
+<div class="error">
+    <p>Produto não encontrado!</p>
+    <a href="{{ url_for('cadastro') }}">Voltar para a lista</a>
+</div>
+{% endif %}
+
+<footer class="footer">
+    <div class="footer-section">
+        <h3>Categorias</h3>
+        <ul>
+            <li><a href="#">Smartphones</a></li>
+            <li><a href="#">Eletrônicos</a></li>
+            <li><a href="#">Eletrodomésticos</a></li>
+            <li><a href="#">Tablets</a></li>
+            <li><a href="#">Áudio</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Informações</h3>
+        <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Informações de entrega</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Termos e condições</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-section">
+        <h3>Contate-nos</h3>
+        <p>(13) 919281801</p>
+        <p>dudashop@gmail.com</p>
+        <p>Todos os dias da semana, das 18:30 às 23:00</p>
+    </div>
+
+    <div class="footer-section">
+        <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo" class="footer-logo">
+    </div>
+</footer>
+
+{% endblock content %}

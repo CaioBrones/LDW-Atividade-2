@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<br> 
+
+    <!-- Grade de Celulares -->
+    <div class="produtos-container">
+      <h1>Smartphones</h1>
+      <div class="grade-celulares">
+          <!-- Celular 1 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular1.png') }}" alt="Celular 1">
+              <h3>iPhone 13</h3>
+              <p>R$ 5.999,00</p>
+          </div>
+          <!-- Celular 2 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular2.png') }}" alt="Celular 2">
+              <h3>Samsung Galaxy S21</h3>
+              <p>R$ 4.499,00</p>
+          </div>
+          <!-- Celular 3 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular3.png') }}" alt="Celular 3">
+              <h3>Xiaomi Mi 11</h3>
+              <p>R$ 3.999,00</p>
+          </div>
+          <!-- Celular 4 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular4.png') }}" alt="Celular 4">
+              <h3>Google Pixel 6</h3>
+              <p>R$ 4.299,00</p>
+          </div>
+          <!-- Celular 5 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular5.png') }}" alt="Celular 5">
+              <h3>OnePlus 9 Pro</h3>
+              <p>R$ 4.799,00</p>
+          </div>
+          <!-- Celular 6 -->
+          <div class="celular">
+              <img src="{{ url_for('static', filename='images/celular6.png') }}" alt="Celular 6">
+              <h3>Motorola Edge 20</h3>
+              <p>R$ 3.499,00</p>
+          </div>
+      </div>
+  </div>
+
+  <!-- Retângulo e Quadrado -->
+  <div class="retangulo-quadrado">
+      <div class="retangulo">
+        <img src="{{ url_for('static', filename='images/ps5.svg') }}"></div>
+  </div>
+
+  <!-- Área de Cadastro -->
+  <!-- <div class="cadastro-container">
+      <h2>Cadastrar Novo Celular</h2>
+      <form class="form-cadastro">
+          <input type="text" placeholder="Nome do Celular" required>
+          <input type="number" placeholder="Preço" required>
+          <input type="url" placeholder="URL da Imagem" required>
+          <button type="submit" class="custom-button">Cadastrar</button>
+      </form>
+  </div> -->
+
+
+    <footer class="footer">
+      <div class="footer-section">
+          <h3>Categorias</h3>
+          <ul>
+              <li><a href="#">Smartphones</a></li>
+              <li><a href="#">Eletrônicos</a></li>
+              <li><a href="#">Eletrodomésticos</a></li>
+              <li><a href="#">Tablets</a></li>
+              <li><a href="#">Áudio</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+          <h3>Informações</h3>
+          <ul>
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="#">Informações de entrega</a></li>
+              <li><a href="#">Política de privacidade</a></li>
+              <li><a href="#">Termos e condições</a></li>
+          </ul>
+      </div>
+
+      <div class="footer-section">
+          <h3>Contate-nos</h3>
+          <p>(13) 919281801</p>
+          <p>dudashop@gmail.com</p>
+          <p>Todos os dias da semana, das 18:30 às 23:00</p>
+      </div>
+
+      <div class="footer-section">
+          <img src="{{ url_for('static', filename='images/logo.svg') }}" alt="Logo" class="footer-logo">
+      </div>
+  </footer>
+
+{% endblock content %}
